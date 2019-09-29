@@ -1,4 +1,5 @@
 @import "config";
+@import "utilities";
 
 // General styles
 * {
@@ -29,4 +30,68 @@ h4 {
 
 img {
   width: 100%;
+}
+
+// logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: white;
+  text-transform: uppercase;
+}
+
+// main nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid; //cuz we have a border on hover, so we just make it transparent here
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// header
+#header {
+  // header home
+  &-home {
+    background: $bg-image no-repeat center center / cover;
+    height: 100vh;
+    color: white;
+
+    // header content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-style: 4rem;
+        line-height: 2;
+      }
+    }
+  }
+
+  &-inner {
+  }
 }
